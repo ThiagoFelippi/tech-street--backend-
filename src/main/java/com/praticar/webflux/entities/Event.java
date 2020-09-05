@@ -14,7 +14,7 @@ import java.util.List;
 @Builder
 public class Event {
     @Id
-    private long id;
+    private Long id;
 
     private String name;
     private String description;
