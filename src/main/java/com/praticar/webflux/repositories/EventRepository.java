@@ -12,4 +12,5 @@ public interface EventRepository extends ReactiveCrudRepository<Event, Long> {
     Mono<Event> findById(long id);
     Flux<Event> findByTags(String tag);
     Mono<Event> findByName(String name);
+
 }
