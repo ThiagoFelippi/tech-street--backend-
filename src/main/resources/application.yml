@@ -6,7 +6,7 @@ spring:
   profiles: dev
   r2dbc:
     url: r2dbc:postgresql://localhost:5432/postgres
-    username: root
+    username: postgres
     password: 12345
 logging:
   level:
