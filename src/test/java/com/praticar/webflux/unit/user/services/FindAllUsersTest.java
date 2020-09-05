@@ -1,7 +1,9 @@
-package com.praticar.webflux.services.user;
+package com.praticar.webflux.unit.user.services;
 
 import com.praticar.webflux.entities.User;
 import com.praticar.webflux.repositories.UserRepository;
+import com.praticar.webflux.services.user.FindAllUsers;
+import com.praticar.webflux.unit.user.utils.CreateUserUtil;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -21,13 +23,10 @@ public class FindAllUsersTest {
     @Mock
     private UserRepository userRepositoryMock;
 
+    private final User user = CreateUserUtil.createValidUser();
+
     @BeforeEach
     public void setUp() {
-        User user = User
-                .builder()
-                .username("thiago")
-                .password("12345")
-                .build();
 
         BDDMockito.when(userRepositoryMock.findAll())
                 .thenReturn(Flux.just(user));
@@ -35,12 +34,6 @@ public class FindAllUsersTest {
 
     @Test
     void ShouldFindAllUsers_Valid(){
-        User user = User
-                .builder()
-                .username("thiago")
-                .password("12345")
-                .build();
-
 
         StepVerifier
                 .create(findAllUsers.execute())
