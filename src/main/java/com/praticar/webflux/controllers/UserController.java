@@ -4,7 +4,6 @@ import com.praticar.webflux.entities.User;
 import com.praticar.webflux.services.user.CreateUser;
 import com.praticar.webflux.services.user.FindAllUsers;
 import com.praticar.webflux.services.user.FindByIdUser;
-import com.praticar.webflux.services.user.ValidateUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -17,7 +16,6 @@ public class UserController {
     private final FindAllUsers findAllUsers;
     private final FindByIdUser findByIdUser;
     private final CreateUser createUser;
-
 
     @GetMapping()
     public Flux<User> findAll(){
