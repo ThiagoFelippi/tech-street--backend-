@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Builder
 public class User implements Serializable {
     @Id
-    private Integer id;
+    private Long id;
 
     private String username;
     private String password;
