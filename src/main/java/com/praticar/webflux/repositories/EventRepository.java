@@ -10,6 +10,7 @@ import reactor.core.publisher.Mono;
 public interface EventRepository extends ReactiveCrudRepository<Event, Long> {
 
     Mono<Event> findById(long id);
-    Flux<Event> findByTag(String tag);
+    Flux<Event> findByTags(String tag);
     Mono<Event> findByName(String name);
+
 }
