@@ -7,7 +7,7 @@ import org.springframework.data.relational.core.mapping.Table;
 import java.util.List;
 
 @Data
-@Table("post")
+@Table("events")
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
