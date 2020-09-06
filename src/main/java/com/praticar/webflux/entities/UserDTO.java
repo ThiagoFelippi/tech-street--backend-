@@ -1,9 +1,9 @@
 package com.praticar.webflux.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import reactor.core.publisher.Mono;
+import java.io.Serializable;
 
 @Getter
 @NoArgsConstructor
@@ -13,4 +13,5 @@ public class UserDTO {
     public UserDTO(Mono<User> user){
         this.username = user.block().getUsername();
     }
+
 }

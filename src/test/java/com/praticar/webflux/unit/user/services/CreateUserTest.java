@@ -1,7 +1,9 @@
 package com.praticar.webflux.unit.user.services;
 
 import com.praticar.webflux.entities.User;
+import com.praticar.webflux.entities.UserDTO;
 import com.praticar.webflux.repositories.UserRepository;
+import com.praticar.webflux.services.email.SendEmail;
 import com.praticar.webflux.services.user.CreateUser;
 import com.praticar.webflux.services.user.HashPassword;
 import com.praticar.webflux.services.user.ValidateUser;
@@ -31,6 +33,9 @@ public class CreateUserTest {
 
     @Mock
     private HashPassword hashPassword;
+
+    @Mock
+    private SendEmail sendEmail;
 
     private final User user = CreateUserUtil.createValidUser();
 
