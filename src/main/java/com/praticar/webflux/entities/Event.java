@@ -21,5 +21,6 @@ public class Event {
 
     private String type;
     private int capacity;
-    private List<String> tags;
+
+    private Tag tags;
 }
