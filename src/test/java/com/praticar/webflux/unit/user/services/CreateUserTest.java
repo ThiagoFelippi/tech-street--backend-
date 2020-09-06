@@ -1,7 +1,6 @@
 package com.praticar.webflux.unit.user.services;
 
 import com.praticar.webflux.entities.User;
-import com.praticar.webflux.entities.UserDTO;
 import com.praticar.webflux.repositories.UserRepository;
 import com.praticar.webflux.services.email.SendEmail;
 import com.praticar.webflux.services.user.CreateUser;
