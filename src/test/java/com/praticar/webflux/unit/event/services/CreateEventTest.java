@@ -40,7 +40,7 @@ public class CreateEventTest {
     }
 
     @Test
-    void ShouldCreateUser_Valid() throws Exception {
+    void ShouldCreateEvent_Valid() throws Exception {
 
         StepVerifier
                 .create(createEvent.execute(event))

@@ -35,7 +35,7 @@ public class FindByIdEventTest {
     }
 
     @Test
-    void ShouldCreateUser_Valid() throws Exception {
+    void ShouldFindEventById_Valid() throws Exception {
 
         StepVerifier
                 .create(findByIdEvent.execute(10))

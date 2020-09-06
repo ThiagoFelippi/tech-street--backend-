@@ -35,7 +35,7 @@ public class FindAllEventsTest {
     }
 
     @Test
-    void ShouldCreateUser_Valid() throws Exception {
+    void ShouldFindAllEvents_Valid() throws Exception {
 
         StepVerifier
                 .create(findAllEvents.execute())
