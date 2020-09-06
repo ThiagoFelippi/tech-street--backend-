@@ -13,9 +13,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Service
-@RequiredArgsConstructor
 public class CreateToken {
-    private final Secret_JWT secret_jwt;
 
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
@@ -32,7 +30,7 @@ public class CreateToken {
             .setSubject(subject)
             .setIssuedAt(new Date(System.currentTimeMillis()))
             .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
-            .signWith(SignatureAlgorithm.HS512, secret_jwt.getKey()).compact();
+            .signWith(SignatureAlgorithm.HS512, Secret_JWT.getKey()).compact();
     }
 }
 

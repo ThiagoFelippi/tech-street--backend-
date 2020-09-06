@@ -10,9 +10,7 @@ import java.util.Date;
 import java.util.function.Function;
 
 @Service
-@RequiredArgsConstructor
 public class ExtractInfos {
-    private final Secret_JWT secret_jwt;
 
 
     public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
@@ -31,7 +29,7 @@ public class ExtractInfos {
     private Claims extractAllClaims(String token) {
         return Jwts
                 .parser()
-                .setSigningKey(secret_jwt.getKey())
+                .setSigningKey(Secret_JWT.getKey())
                 .parseClaimsJws(token)
                 .getBody();
     }
