@@ -12,19 +12,14 @@ import reactor.core.publisher.Mono;
 public class CreateUser {
     private final UserRepository userRepository;
     private final ValidateUser validateUser;
+    private final HashPassword hashPassword;
 
     public Mono<User> execute(User user) throws Exception {
         User userValidated = validateUser.execute(user);
 
-        String passwordHashed = new BCryptPasswordEncoder().encode(userValidated.getPassword());
-        User userWithHashedPass = User
-                .builder()
-                .id(user.getId())
-                .username(user.getUsername())
-                .password(passwordHashed)
-                .build();
+        User userWithPasswordHashed = hashPassword.execute(userValidated);
 
-        return userRepository.save(userWithHashedPass);
+        return userRepository.save(userWithPasswordHashed);
     }
 
 }
