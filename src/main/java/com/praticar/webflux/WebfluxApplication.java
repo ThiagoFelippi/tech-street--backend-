@@ -1,6 +1,8 @@
 package com.praticar.webflux;
 
+import com.praticar.webflux.services.email.SendEmail;
 import io.r2dbc.spi.ConnectionFactory;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

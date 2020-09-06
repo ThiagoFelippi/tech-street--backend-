@@ -6,7 +6,11 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.3.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+<<<<<<< HEAD
+        <relativePath/>
+=======
+        <relativePath/> 
+>>>>>>> f78fd388e489a4617f0e56d868f0ff46570345c2
     </parent>
     <groupId>com.praticar</groupId>
     <artifactId>webflux</artifactId>
@@ -69,7 +73,12 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+<<<<<<< HEAD
+            <artifactId>spring-boot-starter-mail</artifactId>
+            <version>2.2.5.RELEASE</version>
+=======
             <artifactId>spring-boot-starter-validation</artifactId>
+>>>>>>> master
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
