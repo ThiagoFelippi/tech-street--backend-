@@ -10,8 +10,8 @@ public class CreateUserUtil {
         return User
                 .builder()
                 .id((long) 1)
-                .username("thiago")
-                .password("12345")
+                .username("thiago crespo")
+                .password("123456")
                 .build();
     }
 
