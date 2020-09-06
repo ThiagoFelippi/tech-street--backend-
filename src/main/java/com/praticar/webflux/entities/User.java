@@ -4,14 +4,10 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-<<<<<<< HEAD
-import javax.sql.RowSet;
-=======
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
->>>>>>> master
 import java.io.Serializable;
 
 @Data
