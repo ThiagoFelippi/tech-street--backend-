@@ -1,10 +1,15 @@
-package com.praticar.webflux.unit.event.services;
+package com.praticar.webflux.unit.tags.services;
 
 import com.praticar.webflux.entities.Event;
+import com.praticar.webflux.entities.Tag;
 import com.praticar.webflux.repositories.EventRepository;
+import com.praticar.webflux.repositories.TagRepository;
 import com.praticar.webflux.services.event.CreateEvent;
 import com.praticar.webflux.services.event.ValidateEvent;
+import com.praticar.webflux.services.tags.CreateTag;
+import com.praticar.webflux.services.tags.ValidateTag;
 import com.praticar.webflux.unit.event.utils.CreateEventUtil;
+import com.praticar.webflux.unit.tags.utils.CreateTagUtil;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,36 +21,36 @@ import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
 @ExtendWith(SpringExtension.class)
-public class CreateEventTest {
+public class CreateTagTest {
     @InjectMocks
-    private CreateEvent createEvent;
+    private CreateTag createTag;
 
     @Mock
-    private EventRepository eventRepository;
+    private TagRepository tagRepository;
 
     @Mock
-    private ValidateEvent validateEvent;
+    private ValidateTag validateTag;
 
-    private final Event event = CreateEventUtil.createValidEvent();
+    private final Tag tag = CreateTagUtil.createValidTag();
 
     @BeforeEach
     public void setUp() throws Exception {
 
-        BDDMockito.when(validateEvent.execute(event))
-                .thenReturn(event);
+        BDDMockito.when(validateTag.execute(tag))
+                .thenReturn(tag);
 
-        BDDMockito.when(eventRepository.save(event))
-                .thenReturn(Mono.just(event));
+        BDDMockito.when(tagRepository.save(tag))
+                .thenReturn(Mono.just(tag));
 
     }
 
     @Test
-    void ShouldCreateEvent_Valid() throws Exception {
+    void ShouldCreateTag_Valid() throws Exception {
 
         StepVerifier
-                .create(createEvent.execute(event))
+                .create(createTag.execute(tag))
                 .expectSubscription()
-                .expectNext(event)
+                .expectNext(tag)
                 .verifyComplete();
     }
 }
