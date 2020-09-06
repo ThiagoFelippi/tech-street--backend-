@@ -14,7 +14,7 @@ public class CreateEventUtil {
                 .name("thiagothiagothiagothiagothiago")
                 .description("12345thiagothiagothiago")
                 .capacity(100)
-                .tags(Collections.singletonList("javascript"))
+                .tags(null)
                 .type("Tecnologia")
                 .build();
     }
