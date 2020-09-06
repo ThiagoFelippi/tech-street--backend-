@@ -1,7 +1,6 @@
 package com.praticar.webflux.services.event;
 
 import com.praticar.webflux.entities.Event;
-import com.praticar.webflux.entities.User;
 import com.praticar.webflux.repositories.EventRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
