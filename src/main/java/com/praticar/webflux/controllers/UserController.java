@@ -1,7 +1,7 @@
 package com.praticar.webflux.controllers;
 
 import com.praticar.webflux.entities.User;
-import com.praticar.webflux.services.email.SendEmail;
+import com.praticar.webflux.entities.UserDTO;
 import com.praticar.webflux.services.user.CreateUser;
 import com.praticar.webflux.services.user.FindAllUsers;
 import com.praticar.webflux.services.user.FindByIdUser;
