@@ -8,6 +8,17 @@ spring:
     url: r2dbc:postgresql://localhost:5432/postgres
     username: postgres
     password: 12345
+  mail:
+    host: "smtp.mailtrap.io"
+    port: 2525
+    username: 9082c6b58705b7
+    password: efc242dc9ac340
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 logging:
   level:
     org.springframework.data.r2dbc: Debug
