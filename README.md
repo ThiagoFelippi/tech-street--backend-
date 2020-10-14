@@ -1,4 +1,5 @@
 # Tech Street!
+obs:Incomplete
 
 * Tech street is application for programmers, designers, etc. find events to participate, either online or in person
 
